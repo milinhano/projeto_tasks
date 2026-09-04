@@ -23,8 +23,6 @@ O projeto é dividido em dois aplicativos, cada um com uma responsabilidade pró
 
 ## Estrutura do projeto
 
-## Estrutura do projeto
-
 ```text
 projeto_tasks/
 ├── venv/                 # Ambiente virtual (não vai para o GitHub)
