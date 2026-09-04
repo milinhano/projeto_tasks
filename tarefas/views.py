@@ -1,15 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
+def listar_tarefas(request):
+    return render(request,'tarefas/listar_tarefas.html')
 
-def index(request):
-    return render(request,'index.html')
-
-
-
-
-
-
-
-
-
+def criar_tarefa(request):
+    return render(request,'tarefas/criar_tarefa.html')

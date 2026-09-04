@@ -1,7 +1,8 @@
 from django.urls import path
-from tarefas.views import index
+from . import views
 
 urlpatterns = [
-    path('',index),
+    path('',views.listar_tarefas, name='listar_tarefas'),
+    path('nova/',views.criar_tarefa, name='criar_tarefa'),
 ]
 
