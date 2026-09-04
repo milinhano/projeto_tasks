@@ -23,6 +23,9 @@ O projeto é dividido em dois aplicativos, cada um com uma responsabilidade pró
 
 ## Estrutura do projeto
 
+## Estrutura do projeto
+
+```text
 projeto_tasks/
 ├── venv/                 # Ambiente virtual (não vai para o GitHub)
 ├── manage.py
@@ -50,6 +53,7 @@ projeto_tasks/
 │   ├── tarefas/
 │   └── usuarios/
 └── static/               # CSS, JS e imagens
+```
 
 ## Pré-requisitos
 
@@ -163,6 +167,7 @@ Acesse http://localhost:8000/ no navegador.
 ## Como manter o projeto atualizado
 
 Sempre comece o trabalho buscando as mudanças que os colegas enviaram:
+
 ```bash
 git pull
 ```
