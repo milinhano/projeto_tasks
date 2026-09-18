@@ -7,5 +7,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('tarefas/', include('tarefas.urls')),
     path('usuarios/', include('usuarios.urls')),
-    path('', RedirectView.as_view(url='/usuarios/'), name='login')
+    path('', RedirectView.as_view(url='/usuarios/login/'))
 ]

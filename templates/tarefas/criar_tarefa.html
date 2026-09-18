@@ -18,7 +18,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2" href="{% url 'listar_tarefas' %}">
-                <img src="img/logo.png" alt="Logo" width="32" height="32">
+                <img src="{% static 'img/logo.png' %}" alt="Logo" width="32" height="32">
                 <span class="fw-bold">Gerenciador de Tarefas</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
@@ -37,7 +37,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href=""> <!-- {  % url 'listar_categorias' %. } --> </a>>
+                        <a class="nav-link" href=""> <!-- {  % url 'listar_categorias' %. } -->
                             <i class="bi bi-tags"></i> Categorias
                         </a>
                     </li>

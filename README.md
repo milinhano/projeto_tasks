@@ -50,7 +50,10 @@ projeto_tasks/
 │   ├── base.html
 │   ├── tarefas/
 │   └── usuarios/
-└── static/               # CSS, JS e imagens
+├── static/               # CSS, JS e imagens
+│   ├── css/
+│   ├── js/
+│   └── img/         
 ```
 
 ## Pré-requisitos
@@ -75,8 +78,9 @@ O ambiente virtual isola as dependências do projeto do resto do sistema:
 python -m venv ./venv
 ```
 
-Ative o ambiente. No Windows:
+Ative o ambiente. 
 
+No Windows:
 ```bash
 venv\Scripts\activate
 ```
@@ -115,7 +119,7 @@ copy .env.example .env
 Abra o .env. Ele contém:
 
 ```bash
-CódigoSECRET_KEY=
+SECRET_KEY=
 DEBUG=True 
 ```
 
