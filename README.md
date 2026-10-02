@@ -190,3 +190,39 @@ O git pull antes do git push evita conflitos: se alguém já enviou mudanças, o
 | SECRET_KEY must not be empty | Arquivo .env não foi criado ou está vazio | Refazer os passos 4 a 6 |
 | O comando manage.py não é reconhecido | Ambiente virtual não está ativado | Verificar se o terminal mostra (venv) no início da linha |
 | Página 404 no navegador | URL digitada não corresponde a nenhuma rota | Conferir os caminhos no urls.py de cada app |
+
+# Trabalhando em equipe no GitHub
+
+## Permissões: quem pode alterar o repositório?
+
+Ao clonar um repositório, você recebe uma cópia completa do código na sua
+máquina. Com essa cópia, você pode editar e commitar localmente sem nenhum
+problema. Mas atenção: clonar NÃO dá permissão para enviar (push) as
+alterações para o repositório no GitHub.
+
+Se você tentar um git push sem ter permissão, o GitHub bloqueia a operação
+com um erro de permissão negada (geralmente algo como "Permission to
+usuario/repositorio.git denied"). Somente o dono do repositório e os
+colaboradores adicionados podem enviar alterações.
+
+### Como adicionar um colaborador
+
+Só o dono do repositório pode adicionar colaboradores. Os passos são:
+
+1. Abra o repositório no GitHub.
+2. Vá em Settings (Configurações).
+3. No menu lateral, clique em Collaborators (ou Manage access).
+4. Clique em Add people (Adicionar pessoas).
+5. Digite o usuário do GitHub da pessoa e envie o convite.
+6. A pessoa aceita o convite pelo e-mail ou pela aba de notificações do GitHub.
+
+Depois de aceitar o convite, a pessoa passa a ter permissão de escrita e
+consegue rodar o git push normalmente, seguindo o fluxo da seção anterior
+(com git pull antes de começar e antes de cada push).
+
+### Organização da turma
+
+Para a atividade, cada grupo deve ter o seu próprio repositório no GitHub,
+criado por um dos integrantes. Os demais integrantes do grupo entram como
+colaboradores seguindo os passos acima. Assim, todos do grupo conseguem
+alterar o mesmo repositório.
