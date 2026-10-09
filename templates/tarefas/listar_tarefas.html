@@ -1,4 +1,4 @@
-{% extends base.html %}
+{% extends 'base.html' %}
 
     {% block content%}
     <!-- Main Content -->
@@ -86,12 +86,13 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {% for tarefa in tarefas %}
                         <tr>
-                            <td>1</td>
-                            <td>Estudar Django - Templates e Static</td>
-                            <td><span class="badge bg-secondary"><i class="bi bi-book"></i> Estudo</span></td>
-                            <td>15/08/2026</td>
-                            <td><span class="badge bg-warning text-dark">Pendente</span></td>
+                            <td>{{ tarefa.id }}</td>
+                            <td>{{ tarefa.titulo }}</td>
+                            <td><span class="badge bg-secondary"><i class="bi bi-book"></i>{{ tarefa.categoria.nome }}</span></td>
+                            <td>{{ tarefa.prazo|date:"d/m/Y" }}</td>
+                            <td><span class="badge bg-warning text-dark">{{ tarefa.get_status_display }}</span></td>
                             <td class="text-center">
                                 <a href="#" class="btn btn-outline-primary btn-sm" title="Editar">
                                     <i class="bi bi-pencil"></i>
@@ -101,66 +102,11 @@
                                 </a>
                             </td>
                         </tr>
+                        {% empty %}
                         <tr>
-                            <td>2</td>
-                            <td>Entregar trabalho de PDS</td>
-                            <td><span class="badge bg-info text-dark"><i class="bi bi-briefcase"></i> Trabalho</span></td>
-                            <td>20/08/2026</td>
-                            <td><span class="badge bg-info text-dark">Em Andamento</span></td>
-                            <td class="text-center">
-                                <a href="#" class="btn btn-outline-primary btn-sm" title="Editar">
-                                    <i class="bi bi-pencil"></i>
-                                </a>
-                                <a href="#" class="btn btn-outline-danger btn-sm" title="Excluir">
-                                    <i class="bi bi-trash"></i>
-                                </a>
-                            </td>
+                            <td colspan="6">Nenhuma tarefa encontrada.</td>
                         </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Configurar ambiente virtual</td>
-                            <td><span class="badge bg-success"><i class="bi bi-gear"></i> Configuracao</span></td>
-                            <td>13/08/2026</td>
-                            <td><span class="badge bg-success">Concluida</span></td>
-                            <td class="text-center">
-                                <a href="#" class="btn btn-outline-primary btn-sm" title="Editar">
-                                    <i class="bi bi-pencil"></i>
-                                </a>
-                                <a href="#" class="btn btn-outline-danger btn-sm" title="Excluir">
-                                    <i class="bi bi-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Revisar pull requests do grupo</td>
-                            <td><span class="badge bg-secondary"><i class="bi bi-book"></i> Estudo</span></td>
-                            <td>18/08/2026</td>
-                            <td><span class="badge bg-warning text-dark">Pendente</span></td>
-                            <td class="text-center">
-                                <a href="#" class="btn btn-outline-primary btn-sm" title="Editar">
-                                    <i class="bi bi-pencil"></i>
-                                </a>
-                                <a href="#" class="btn btn-outline-danger btn-sm" title="Excluir">
-                                    <i class="bi bi-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Documentar o projeto no README</td>
-                            <td><span class="badge bg-info text-dark"><i class="bi bi-briefcase"></i> Trabalho</span></td>
-                            <td>22/08/2026</td>
-                            <td><span class="badge bg-info text-dark">Em Andamento</span></td>
-                            <td class="text-center">
-                                <a href="#" class="btn btn-outline-primary btn-sm" title="Editar">
-                                    <i class="bi bi-pencil"></i>
-                                </a>
-                                <a href="#" class="btn btn-outline-danger btn-sm" title="Excluir">
-                                    <i class="bi bi-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>

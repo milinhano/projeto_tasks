@@ -226,3 +226,6 @@ Para a atividade, cada grupo deve ter o seu próprio repositório no GitHub,
 criado por um dos integrantes. Os demais integrantes do grupo entram como
 colaboradores seguindo os passos acima. Assim, todos do grupo conseguem
 alterar o mesmo repositório.
+
+user: camila
+senha: 123456
